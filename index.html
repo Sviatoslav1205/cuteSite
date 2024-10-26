@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Опитування для Насі</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="startQuestion" id="startQuestion">
+    Нася🩷, чи готова ти пройти опитування?
+    <div class="buttons">
+      <button class="yesBtn" onclick="yesClick()">Так</button>
+      <button class="noBtn" id="noBtn" onclick="moveRandom()">Ні</button>
+    </div>
+  </div>
+
+  <div class="mainTest" id="mainTest">
+    <div class="progress">
+      <div class="filler" id="filler"></div>
+    </div>
+
+    <div class="question" id="firstQuestion">
+      <div class="title">Як Святік🦕 найчастіше тебе називає?</div>
+      <div class="variants">
+        <div class="row">
+          <input type="radio" id="Настя" name="firstAnswer" value="Настя" onchange="showNextButton()">
+          <label for="Настя">Настя👩🏽</label>
+        </div>
+        <div class="row">
+          <input type="radio" id="Анастасія" name="firstAnswer" value="Анастасія" onchange="showNextButton()">
+          <label for="Анастасія">Анастасія🤵🏽‍♀️</label>
+        </div>
+        <div class="row">
+          <input type="radio" id="Нася" name="firstAnswer" value="Нася" onchange="showNextButton()">
+          <label for="Нася">Нася🥰</label>
+        </div>
+        <div class="row">
+          <input type="radio" id="Ананася" name="firstAnswer" value="Ананася" onchange="showNextButton()">
+          <label for="Ананася">Ананася🍍</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="question hidden" id="secondQuestion">
+      <div class="title">Святік🦕 любить Насю🍍❤️?</div>
+      <div class="variants threeInRow">
+        <div class="row">
+          <input type="radio" id="Так_1" name="secondAnswer" value="Так" onchange="showNextButton()">
+          <label for="Так_1">Так❤️❤️❤️</label>
+        </div>
+        <div class="row">
+          <input type="radio" id="Трошки_1" name="secondAnswer" value="Трошки" onchange="showNextButton()">
+          <label for="Трошки_1">Трошки</label>
+        </div>
+        <div class="row">
+          <input type="radio" id="Ні_1" name="secondAnswer" value="Ні" onchange="showNextButton()">
+          <label for="Ні_1">Ні💔</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="question hidden" id="thirdQuestion">
+      <div class="title">Нася🍍❤️ любить Святіка🦕?</div>
+      <div class="variants threeInRow">
+        <div class="row">
+          <input type="radio" id="Так_2" name="thirdAnswer" value="Так" onchange="showNextButton()">
+          <label for="Так_2">Так🩵🩵🩵</label>
+        </div>
+        <div class="row">
+          <input type="radio" id="Трошки_2" name="thirdAnswer" value="Трошки" onchange="showNextButton()">
+          <label for="Трошки_2">Трошки</label>
+        </div>
+        <div class="row">
+          <input type="radio" id="Ні_2" name="thirdAnswer" value="Ні" onchange="showNextButton()">
+          <label for="Ні_2">Ні💔</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="question hidden" id="fourthQuestion">
+      <div class="title">Святік🦕 підняв Насі🍍❤️ настрій😊?</div>
+      <div class="variants threeInRow">
+        <div class="row">
+          <input type="radio" id="Так_3" name="fourthAnswer" value="Так" onchange="showNextButton()">
+          <label for="Так_3">Так🥰🥰🥰</label>
+        </div>
+        <div class="row">
+          <input type="radio" id="Трошки_3" name="fourthAnswer" value="Трошки" onchange="showNextButton()">
+          <label for="Трошки_3">Трошки</label>
+        </div>
+        <div class="row">
+          <input type="radio" id="Ні_3" name="fourthAnswer" value="Ні" onchange="showNextButton()">
+          <label for="Ні_3">Ні</label>
+        </div>
+      </div>
+    </div>
+    
+    <button type="submit" class="next" id="nextBtn" onclick="next()">
+      Далі 
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" id="arrow">
+        <g fill="none" fill-rule="evenodd" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+          <path d="M1 7h16M11 1l6 6-6 6"></path>
+        </g>
+      </svg>
+    </button>
+  </div>
+
+  <div class="win" id="win">
+    Урааааааа, Нася пройшлаааааа, молодеееееецьььььььььь <br>❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
+    <img src="./bubu-dancing-dance.gif" alt="" class="bubu1">
+    <img src="./dancing-bubu.gif" alt="" class="bubu2">
+    <img src="./bubu-happy-dance.gif" alt="" class="bubu3">
+    <img src="./cat-cute.gif" alt="" class="cuteDance1">
+    <img src="./cat-dance-dancing-cat.gif" alt="" class="cuteDance2">
+    <img src="./dancing-cat-dance.gif" alt="" class="cuteDance3">
+  </div>
+  <div class="loose" id="loose">
+    Аяяй, Нась, ну нічого, на наступний раз пройдеш <br>❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

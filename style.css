@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body {
+  background-color: #ffdddd;
+  font-family: Nunito;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.startQuestion {
+  background-color: #fff1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 70%;
+  padding: 40px 40px 20px;
+  border-radius: 25px;
+  font-size: 24px;
+
+  transition: opacity .5s ease;
+}
+
+.progress {
+  margin: 0 10px;
+  border-radius: 5px;
+  background-color: #ececec;
+  border: 1px solid #3e3e3e;
+  height: 30px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.filler {
+  background-color: #53ff67;
+  height: 100%;
+  width: 0%;
+
+  transition: width .3s ease;
+}
+
+.question {
+  background-color: #fff1f1;
+  padding: 20px 35px 20px;
+  margin-bottom: 45px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  transition: opacity .2s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+}
+
+.variants {
+  margin-top: 10px;
+  display: flex;  
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 18px;
+}
+
+.threeInRow {
+  flex-wrap: nowrap;
+}
+
+.row {
+  width: 40%;
+}
+
+.threeInRow .row {
+  width: 30%;
+}
+
+.next {
+  transition: opacity .2s ease;
+  display: none;
+  opacity: 0;
+  margin-top: 10px;
+  height: 40px;
+  background-color: #fedbff;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.next svg {
+  transition: margin-left .3s ease;
+}
+
+.next:hover svg {
+  margin-left: 10px;
+}
+
+.buttons {
+  gap: 50px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.yesBtn, .noBtn {
+  border: none;
+  width: 100px;
+  height: 40px;
+  font-size: 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color .2s ease, scale .2s ease, transform .7s ease, box-shadow .2s ease, top .7s ease, left .7s ease;
+}
+
+.yesBtn:hover, .noBtn:hover {
+  scale: 1.2;
+  box-shadow: 0px 2px 3px #000;
+}
+
+.yesBtn {
+  background-color: #40e24d;
+  margin-right: 100px;
+}
+
+.yesBtn:hover {
+  background-color: #33c940;
+}
+
+.noBtn {
+  top: 53.6%;
+  left: 52%;
+  background-color: #cf2222;
+  position: absolute;
+}
+
+.noBtn:hover {
+  background-color: #bb1c1c;
+}
+
+.mainTest {
+  width: 50%;
+  transition: opacity .3s ease;
+  opacity: 0;
+  display: none;
+  flex-direction: column;
+}
+
+.win {
+  transition: opacity .3s ease;
+  opacity: 0;
+  background-color: #fff1f1;
+  padding: 20px 35px 20px;
+  border-radius: 25px;
+  font-size: 28px;
+  width: 70%;
+  height: 50vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.loose {
+  transition: opacity .3s ease;
+  opacity: 0;
+  background-color: #fff1f1;
+  padding: 20px 35px 20px;
+  border-radius: 25px;
+  font-size: 28px;
+  width: 70%;
+  height: 50vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.bubu1 {
+  width: 300px;
+  rotate: -10deg;
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  border-radius: 15px;
+}
+
+.bubu2 {
+  width: 300px;
+  rotate: 10deg;
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  border-radius: 100px;
+}
+
+.bubu3 {
+  width: 150px;
+  rotate: -10deg;
+  position: absolute;
+  bottom: 50px;
+  right: 30px;
+  border-radius: 100px;
+}
+
+.cuteDance1 {
+  width: 200px;
+  rotate: -5deg;
+  position: absolute;
+  bottom: 10px;
+  left: 40%;
+  border-radius: 70px;
+}
+
+.cuteDance2 {
+  height: 300px;
+  rotate: 10deg;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  border-radius: 100px;
+}
+
+.cuteDance3 {
+  height: 220px;
+  rotate: 3deg;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  border-radius: 100px;
+}
